@@ -1,5 +1,6 @@
 import csv
-from src.marketpulse.stats import simple_returns, max_drawdown
+
+from src.marketpulse.stats import max_drawdown, simple_returns
 
 with open("data/prices.csv") as f:
     prices = [float(row["close"]) for row in csv.DictReader(f)]

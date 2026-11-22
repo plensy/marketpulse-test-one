@@ -2,7 +2,7 @@ def simple_returns(prices: list[float]) -> list[float]:
     """Daily returns: p[t] / p[t-1] - 1."""
     if len(prices) < 2:
         raise ValueError("need at least two prices")
-    return [p1 / p0 - 1 for p0, p1 in zip(prices, prices[1:])]
+    return [p1 / p0 - 1 for p0, p1 in zip(prices, prices[1:], strict=False)]
 
 
 def max_drawdown(prices: list[float]) -> float:
