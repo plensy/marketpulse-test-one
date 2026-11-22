@@ -1,1 +1,4 @@
+dash
+gunicorn
 pytest
+ruff
